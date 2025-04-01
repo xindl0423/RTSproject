@@ -1,11 +1,13 @@
 #pragma once
 #include <Arduino.h>
 
-#define LED_up PB1
-#define LED_down PB3
-#define LED_centre PB0
-#define LED_right PB2
-#define LED_left PB4
+#define LED5 PB0
+#define LED4 PB1
+#define LED3 PB2
+#define LED2 PB3
+#define LED1 PB4
+#define LED_down PB5
+
 
 void ADC_init(){
     DDRC &=~((1<<PC0) | (1<<PC1));
@@ -16,7 +18,9 @@ void ADC_init(){
 }
 
 void LED_init(){
-    DDRB |= (1<<LED_up) | (1<<LED_down) | (1<<LED_centre) | (1<<LED_right) | (1<<LED_left);
-    PORTB &= ~((1<<LED_up) | (1<<LED_down) | (1<<LED_centre) | (1<<LED_right) | (1<<LED_left));
+    DDRB |= (1<<LED5) | (1<<LED4) | (1<<LED3) | (1<<LED2) | (1<<LED1) | (1<<LED_down);
+    PORTB &= ~((1<<LED5) | (1<<LED4) | (1<<LED3) | (1<<LED2) | (1<<LED1) | (1<<LED_down));
 }
-    
+
+void updateLED(uint16_t x_value, uint16_t y_value);
+int ADC_Read(byte channel);

@@ -13,8 +13,9 @@ int main() {
     USART_init();
     ADC_init();
     LED_init();
-    updateLED();
-    ADC_Read();
+    updateLED(uint16_t x_value, uint16_t y_value);
+    ADC_Read(byte channel);
+    
 
     while (1) {
         x = ADC_Read(PC0);
