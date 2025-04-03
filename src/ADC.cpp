@@ -1,15 +1,15 @@
 #include <ADC.h>
 
 void updateLED(uint16_t x_value, uint16_t y_value){
-    PORTB &= ~((1 << LED5) | (1 << LED4) | (1 << LED3) | (1 << LED2) | (1 << LED1) | (1 << LED_down));
+    PORTB &= ~((1 << LED3) | (1 << LED2) | (1 << LED1) | (1 << LED_down));
     if(x_value >= 256 && x_value <= 768 && y_value >= 256 && y_value <= 768){
-        PORTB |= (1<<LED3);
+        PORTB |= (1<<LED2);
     }
     else if (x_value  < 256){
-        PORTB |= (1<<LED1);
+        PORTB |= (1<<LED13);
     }
     else if(x_value > 768){
-        PORTB |= (1<<LED5);
+        PORTB |= (1<<LED1);
     }
     else if(y_value < 256){
         PORTB |= (1<<LED_down);

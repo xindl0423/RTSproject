@@ -3,6 +3,8 @@
 #include <ADC.h>
 #include <USART.h>
 
+#define Buzzer
+
 int main() {
     #ifdef __DEBUG__
         dbg_start();
@@ -13,9 +15,8 @@ int main() {
     USART_init();
     ADC_init();
     LED_init();
-    updateLED(uint16_t x_value, uint16_t y_value);
-    ADC_Read(byte channel);
-    
+    updateLED();
+    ADC_Read();
 
     while (1) {
         x = ADC_Read(PC0);

@@ -1,12 +1,10 @@
 #pragma once
 #include <Arduino.h>
 
-#define LED5 PB0
-#define LED4 PB1
+#define LED_down PB1
 #define LED3 PB2
 #define LED2 PB3
 #define LED1 PB4
-#define LED_down PB5
 
 
 void ADC_init(){
@@ -18,8 +16,8 @@ void ADC_init(){
 }
 
 void LED_init(){
-    DDRB |= (1<<LED5) | (1<<LED4) | (1<<LED3) | (1<<LED2) | (1<<LED1) | (1<<LED_down);
-    PORTB &= ~((1<<LED5) | (1<<LED4) | (1<<LED3) | (1<<LED2) | (1<<LED1) | (1<<LED_down));
+    DDRB |= (1<<LED3) | (1<<LED2) | (1<<LED1) | (1<<LED_down);
+    PORTB &= ~((1<<LED3) | (1<<LED2) | (1<<LED1) | (1<<LED_down));
 }
 
 void updateLED(uint16_t x_value, uint16_t y_value);
