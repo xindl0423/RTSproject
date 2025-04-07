@@ -1,17 +1,16 @@
-e#pragma once
-#include <Arduino.h>
+#ifndef _7SEGMENT_H
+#define _7SEGMENT_H
+
+#include <avr/io.h>
 
 #define ARRAY_SIZE 16
-#define Button PC0
+#define Button PC0  // Analog A0
+#define switch0 PB0 // Digital 8
+#define switch1 PB1 // Digital 9
 
-void displaydigits();
+extern uint8_t digits[ARRAY_SIZE];
 
-byte digits[ARRAY_SIZE] = {0xEE, 0x82, 0xDC, 0xD6, 0xB2, 0x76, 0x7E, 0xC2, 0xFE, 0xF6, 0xFA, 0xFE, 0x6C, 0xEE, 0x7C, 0x78};
-  
-DDRD = 00001111;
-DDRC = 01111000;   
-DDRC &= ~(1<<Button);
-PORTC != (1<<Button);
+void displaydigits(void);
+void segment_init(void);
 
-DDRB &= ~((1<<switch0) | (1<<switch1));
-PORTB != ((1<<switch0) | (1<<switch1));
+#endif

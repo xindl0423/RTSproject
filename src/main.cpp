@@ -1,20 +1,17 @@
-#include <Arduino.h>
-#include <avr/interrupt.h>
-#include <ADC.h>
-#include <LED.h>
-#include <7segment.h>
+#include "LED.h"
+#include <util/delay.h>
 
 int main() {
-    #ifdef __DEBUG__
-        dbg_start();
-    #endif
-    int x;
-    int y;
-    char text[30];
     LED_init();
-
+    
     while (1) {
-
-        sprintf(text, "X: %d, Y: %d\n", x, y);
+        if (is_button_pressed()) {
+            // Wait for button release
+            while (is_button_pressed());
+            _delay_ms(50);
+            
+            // Run the sequence
+            LED_sequence();
+        }
     }
 }
