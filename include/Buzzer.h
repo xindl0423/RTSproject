@@ -3,8 +3,6 @@
 
 #include <avr/io.h>
 
-#define BUZZER_PIN PB2
-
 void Buzzer_init();
 void Buzzer_sequence();
 
