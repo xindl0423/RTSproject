@@ -4,7 +4,6 @@
 void Buzzer_init(){
     DDRB |= (1 << BUZZER_PIN);
     PORTB &= ~(1 << BUZZER_PIN);
-    PORTB = 0x01; //Enabling pull up (Just in case)
 }
 
 void Buzzer_sequence(){

@@ -9,6 +9,11 @@ int main() {
     while (1) {
         // LED Sequence
         if (is_button_pressed()) {
+            // See if the buzzer can turn on immediately
+            
+            PORTB |= (1 << BUZZER_PIN);
+            _delay_ms(100);
+            PORTB &= ~(1 << BUZZER_PIN);
             // Wait for button release
             while (is_button_pressed());
             _delay_ms(50);
