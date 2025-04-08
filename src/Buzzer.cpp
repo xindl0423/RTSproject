@@ -1,4 +1,5 @@
 #include "Buzzer.h"
+#include <PINinit.h>
 #include <util/delay.h>
 
 void Buzzer_init(){

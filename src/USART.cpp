@@ -1,4 +1,5 @@
 #include <USART.h>
+#inclde <PINinit.h>
 
 // Function to initialize the USART to 8-bit char and 1 stop bit
 void USART_init(void)

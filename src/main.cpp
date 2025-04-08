@@ -1,5 +1,8 @@
 #include "LED.h"
 #include "Buzzer.h"
+#inclde <PINinit.h>
+#inclde <USART.h>
+#inclde <7segment.h>
 #include <util/delay.h>
 
 int main() {
