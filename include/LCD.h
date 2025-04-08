@@ -12,4 +12,3 @@ void LCD_init(void);
 void PORTS_init(void);
 void LCD_string(const char* str);
 
-#endif
