@@ -10,6 +10,10 @@ int main() {
     LED_init();
     Buzzer_init();
     LCD_init();
+    USART_init(MYUBRR);
+
+    char text[256];
+    uint8_t red, green, blue;
 
     while (1) {
         if (is_button_pressed()) {
@@ -25,12 +29,12 @@ int main() {
             // Run sequences
             LED_sequence();
             Buzzer_sequence();
-            /*Code that sends to LCD and USART
+            /*Code that sends to LCD and USART*/
             LCD_string("Type valid values for R G B color (use space between values): ");
             USART_send_string("Type valid values for R G B color (use space between values): ");
             USART_get_string(text);
             parse(text, &red, &green, &blue); // Parse RGB values with error checking
-            */
+            
         }
     }
 }

@@ -35,7 +35,7 @@ void PORTS_init(void)
 	PORTB &= ~(1 << EN);		   // turn off EN
 
 	// PC0-PC4 for LCD D4-D7, respectively.
-	DDRC |= 0x0F; // set pin output mode
+	DDRD |= 0x0F; // set pin output mode
 }
 
 void LCD_nibble_write(uint8_t data, uint8_t control)
