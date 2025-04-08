@@ -25,6 +25,12 @@ int main() {
             // Run sequences
             LED_sequence();
             Buzzer_sequence();
+            /*Code that sends to LCD and USART
+            LCD_string("Type valid values for R G B color (use space between values): ");
+            USART_send_string("Type valid values for R G B color (use space between values): ");
+            USART_get_string(text);
+            parse(text, &red, &green, &blue); // Parse RGB values with error checking
+            */
         }
     }
 }
