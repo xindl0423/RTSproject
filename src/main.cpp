@@ -4,10 +4,12 @@
 #include "USART.h"
 #include "seg7.h"
 #include <util/delay.h>
+#include "LCD.h"
 
 int main() {
     LED_init();
     Buzzer_init();
+    LCD_init();
 
     while (1) {
         if (is_button_pressed()) {
