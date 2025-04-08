@@ -1,9 +1,7 @@
 #include <LCD.h>
 #include <PINinit.h>
-#include <LCD.h>
 
 #define PORT
-
 
 // initialize port pins then initialize LCD controller
 void LCD_init(void)
