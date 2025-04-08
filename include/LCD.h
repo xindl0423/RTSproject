@@ -1,4 +1,5 @@
 #pragma once
+#include <PINinit.h>
 #include <Arduino.h>
 
 // Functions Prototypes
