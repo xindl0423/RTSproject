@@ -1,5 +1,5 @@
-#include <util/delay.h>
 #include "Buzzer.h"
+#include <util/delay.h>
 
 void Buzzer_init(){
     DDRB |= (1 << BUZZER_PIN);
