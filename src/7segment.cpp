@@ -19,7 +19,6 @@ void segment_init() {
 
 void displaydigits() {
     static uint8_t current_digit = 0;
-    
     PORTD = digits[current_digit];
     current_digit = (current_digit + 1) % ARRAY_SIZE;
     _delay_ms(500);
