@@ -3,6 +3,7 @@
 #include "PINinit.h"
 #include "USART.h"
 #include "seg7.h"
+#include "Button.h"
 #include <util/delay.h>
 #include "LCD.h"
 
@@ -12,15 +13,16 @@ int main() {
     LCD_init();
     USART_init(MYUBRR);
 
+    // Immediate feedback beep
+    PORTC |= (1 << BUZZER_PIN);
+    _delay_ms(100);
+    PORTC &= ~(1 << BUZZER_PIN);
+
     char text[256];
     uint8_t red, green, blue;
 
     while (1) {
         if (is_button_pressed()) {
-            // Immediate feedback beep
-            PORTB |= (1 << BUZZER_PIN);
-            _delay_ms(100);
-            PORTB &= ~(1 << BUZZER_PIN);
             
             // Wait for button release
             while (is_button_pressed());

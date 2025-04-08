@@ -5,7 +5,7 @@
 #define LED1 PB5
 #define LED2 PB4
 #define LED3 PB3
-#define BUZZER_PIN PB2
+#define BUZZER_PIN PC3
 #define RS PB1 // Register Select is connected to PB0
 #define EN PB0 // Enable pin is connected to PB1
 
