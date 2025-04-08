@@ -1,16 +1,15 @@
-#ifndef LCD_H
-#define LCD_H
+#pragma once
+#include <Arduino.h>
 
-#include <avr/io.h>
-#include <util/delay.h>
+// Functions Prototypes
+void delayMs(uint16_t ms);
 
-
-// Function Prototypes
-void LCD_init();
-void LCD_command(uint8_t cmd);
+// initialize the library with the numbers of the interface pins
+void LCD_nibble_write(uint8_t data, uint8_t control);
+void LCD_command(uint8_t command);
 void LCD_data(uint8_t data);
-void LCD_string(const char *str);
-void LCD_clear();
-void LCD_set_cursor(uint8_t row, uint8_t col);
+void LCD_init(void);
+void PORTS_init(void);
+void LCD_string(const char* str);
 
 #endif
