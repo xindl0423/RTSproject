@@ -13,10 +13,6 @@ int main() {
     LCD_init();
     USART_init(MYUBRR);
 
-    // Immediate feedback beep
-    PORTC |= (1 << BUZZER_PIN);
-    _delay_ms(100);
-    PORTC &= ~(1 << BUZZER_PIN);
 
     char text[256];
     uint8_t red, green, blue;
