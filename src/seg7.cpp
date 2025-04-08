@@ -1,6 +1,6 @@
-#include"Segment.h"
-#include"ShiftReg.h"
-#include <PINint.h>
+#include "seg7.h"
+#include "shifreg.h"
+#include <PINinit.h>
 
 void displyValue(byte value)
 {

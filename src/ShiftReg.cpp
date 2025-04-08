@@ -1,4 +1,4 @@
-#include"ShiftReg.h"
+#include "shifreg.h"
 #include <PINinit.h>
 
 void init_shift(byte dataPin, byte clockPin, byte latchPin)

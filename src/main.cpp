@@ -28,8 +28,16 @@ int main() {
             LED_sequence();
             Buzzer_sequence();
             /*Code that sends to LCD and USART*/
+<<<<<<< Updated upstream
             LCD_string("Press button to start count down");
             USART_send_string("Press button to start count down");
+=======
+            LCD_string("Press button to start Countdown");
+            USART_send_string("Press button to start Countdown");
+            USART_get_string(text);
+            parse(text, &red, &green, &blue); // Parse RGB values with error checking
+            
+>>>>>>> Stashed changes
         }
     }
 }
