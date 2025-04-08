@@ -1,9 +1,7 @@
-#ifndef BUZZER_H
-#define BUZZER_H
-
+#pragma once
+#include<Arduino.h>
 #include <avr/io.h>
 
 void Buzzer_init();
 void Buzzer_sequence();
 
-#endif

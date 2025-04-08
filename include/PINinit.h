@@ -20,4 +20,3 @@
 
 //PortC
 #define BUTTON_PIN PC0
-

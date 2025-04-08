@@ -1,5 +1,8 @@
 #include "Buzzer.h"
 #include "PINinit.h"
+#include <Buzzer.h>
+#include <PINinit.h>
+#include <util/delay.h> 
 
 void Buzzer_init() {
     DDRC |= (1 << BUZZER_PIN);  // Set PC3 (A3) as output

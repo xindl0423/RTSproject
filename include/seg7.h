@@ -6,4 +6,3 @@
 extern uint8_t digits[ARRAY_SIZE];
 
 void displyValue(byte value);
-
