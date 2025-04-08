@@ -1,4 +1,4 @@
-#include "7segment.h"
+#include <seg7.h>
 #inclde <PINinit.h>
 #include <util/delay.h>
 
