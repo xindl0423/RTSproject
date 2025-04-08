@@ -11,11 +11,8 @@ int main() {
     LED_init();
     Buzzer_init();
     LCD_init();
-    USART_init(MYUBRR);
-
-
-    char text[256];
-    uint8_t red, green, blue;
+    USART_init();
+    LCD_command(1);
 
     while (1) {
         if (is_button_pressed()) {
@@ -28,16 +25,8 @@ int main() {
             LED_sequence();
             Buzzer_sequence();
             /*Code that sends to LCD and USART*/
-<<<<<<< Updated upstream
             LCD_string("Press button to start count down");
             USART_send_string("Press button to start count down");
-=======
-            LCD_string("Press button to start Countdown");
-            USART_send_string("Press button to start Countdown");
-            USART_get_string(text);
-            parse(text, &red, &green, &blue); // Parse RGB values with error checking
-            
->>>>>>> Stashed changes
         }
     }
 }
