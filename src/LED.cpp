@@ -27,11 +27,11 @@ void LED_sequence() {
     _delay_ms(20);
     
     // Sequence: Turn on LEDs one by one
-    PORTB |= (1 << LED1);  // LED1 (PB5) ON
+    PORTB |= (1 << LED3);  // LED1 (PB5) ON
     _delay_ms(3000);
     PORTB |= (1 << LED2);  // LED2 (PB4) ON
     _delay_ms(3000);
-    PORTB |= (1 << LED3);  // LED3 (PB3) ON
+    PORTB |= (1 << LED1);  // LED3 (PB3) ON
     _delay_ms(3000);
     
     // Turn all OFF

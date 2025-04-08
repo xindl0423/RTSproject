@@ -1,7 +1,8 @@
 #include <seg7.h>
-#inclde <PINinit.h>
+#include <PINinit.h>
 #include <util/delay.h>
 
+/*
 uint8_t digits[ARRAY_SIZE] = {0xEE, 0x82, 0xDC, 0xD6, 0xB2, 0x76, 0x7E, 0xC2, 0xFE, 0xF6, 0xFA, 0xFE, 0x6C, 0xEE, 0x7C, 0x78};
 
 void segment_init() {
@@ -24,3 +25,4 @@ void displaydigits() {
     current_digit = (current_digit + 1) % ARRAY_SIZE;
     _delay_ms(500);
 }
+    */
