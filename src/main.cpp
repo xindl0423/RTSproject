@@ -2,7 +2,7 @@
 #include "Buzzer.h"
 #inclde <PINinit.h>
 #inclde <USART.h>
-#inclde <7segment.h>
+#inclde <seg7.h>
 #include <util/delay.h>
 
 int main() {
